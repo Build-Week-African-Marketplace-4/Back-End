@@ -6,7 +6,7 @@ Sauti Africa empowers small business owners, particularly women, to improve thei
 ### Your URL link: African-Marketplace-4 https://africanmarket2.herokuapp.com
 
 ##Table Schema
-
+{
 CREATE TABLE user (
     id         INTEGER       NOT NULL
                              PRIMARY KEY AUTOINCREMENT,
@@ -16,6 +16,8 @@ CREATE TABLE user (
     last_name  VARCHAR (128),
     email      VARCHAR (128) 
 );
+}
+{
 CREATE TABLE item (
     id          INTEGER       NOT NULL
                               PRIMARY KEY AUTOINCREMENT,
@@ -30,7 +32,8 @@ CREATE TABLE item (
     )
     REFERENCES user (id) ON DELETE RESTRICT
                          ON UPDATE CASCADE
-);
+);}
+{
 CREATE TABLE category (
     id      INTEGER       NOT NULL
                           PRIMARY KEY AUTOINCREMENT,
@@ -42,6 +45,8 @@ CREATE TABLE category (
     REFERENCES item (id) ON DELETE RESTRICT
                          ON UPDATE CASCADE
 );
+}
+{
 CREATE TABLE user_item (
     item_id INTEGER NOT NULL,
     user_id INTEGER NOT NULL,
@@ -60,7 +65,7 @@ CREATE TABLE user_item (
         item_id
     )
 );
-
+}
 ## End Points
 
 | GET users |
