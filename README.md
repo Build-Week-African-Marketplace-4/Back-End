@@ -18,7 +18,9 @@ CREATE TABLE user (
     email      VARCHAR (128) 
 );
 }
+```
 
+```
 {
 CREATE TABLE item (
     id          INTEGER       NOT NULL
@@ -35,7 +37,9 @@ CREATE TABLE item (
     REFERENCES user (id) ON DELETE RESTRICT
                          ON UPDATE CASCADE
 );}
+```
 
+```
 {
 CREATE TABLE category (
     id      INTEGER       NOT NULL
@@ -49,7 +53,9 @@ CREATE TABLE category (
                          ON UPDATE CASCADE
 );
 }
+```
 
+```
 {
 CREATE TABLE user_item (
     item_id INTEGER NOT NULL,
@@ -70,6 +76,7 @@ CREATE TABLE user_item (
     )
 );
 }
+```
 
 ## End Points
 
