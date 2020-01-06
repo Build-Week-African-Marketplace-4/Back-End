@@ -85,13 +85,16 @@ CREATE TABLE user_item (
 | ---- |
 | required - username and password |
 | register request |
+
 {
 	"username": "mike12",
 	"password": "pass",
 	"email": "mike2@aol.com"
 }
+
 | Status: 201 Created |
 
+```
 {
     "newUser": {
         "id": 5,
@@ -102,6 +105,7 @@ CREATE TABLE user_item (
     },
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJtaWtlMTIiLCJpYXQiOjE1NzgzMzg5MDksImV4cCI6MTU3ODc3MDkwOX0.tpMk9ha8dewCRCvAzHs3LmSU3Zr-GS8dxY2lDIvaOOg"
 }
+```
 
 | POST |
 | --- |
@@ -109,14 +113,17 @@ CREATE TABLE user_item (
 | required - username and password |
 | login request |
 
+```
 {
 	"username": "mike12",
 	"password": "pass"
 	
 }
+```
 
 | Status: 200 OK |
 
+```
 {
     "login": {
         "id": 5,
@@ -127,6 +134,7 @@ CREATE TABLE user_item (
     },
     "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJtaWtlMTIiLCJpYXQiOjE1NzgzMzkxNDMsImV4cCI6MTU3ODc3MTE0M30.NB52XS64QJ6bvFFdL8tdXSoUfKRHRHx-Ee_APdEiwOw"
 }
+```
 
 | GET user by id |
 | ---- |
@@ -159,6 +167,8 @@ CREATE TABLE user_item (
 | "name", "city", "country", "price", and "user_id" |
 | token required |
 | required fields to add item to user "name", "city", "country", "price", and "user_id" |
+
+```
 {
 	"name": "raddish",
     "description": "red",
@@ -167,16 +177,20 @@ CREATE TABLE user_item (
     "country": "Nigeria",
     "user_id": 1
 }
+```
 
 | POST category to new item |
 | --- |
 | api/category  |
 | --- |
 | Token required  |
+
+```
 {
 	"type": "vegetable",
     "item_id": 3
 }
+```
 
 | Put edit a item by id |
 | --- |
