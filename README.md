@@ -23,7 +23,7 @@ Sauti Africa empowers small business owners, particularly women, to improve thei
 
 | GET user by id |
 | ---- |
-| api/users/:id |
+| api/user/:id |
 | --- |
 | Restricted endpoint Token required |
  
@@ -56,7 +56,7 @@ Sauti Africa empowers small business owners, particularly women, to improve thei
 
 | Put edit a item by id |
 | --- |
-| api/items/:id |
+| api/item/:id |
 | --- |
 |  |
 
