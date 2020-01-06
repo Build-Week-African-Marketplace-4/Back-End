@@ -5,7 +5,8 @@ Sauti Africa empowers small business owners, particularly women, to improve thei
 
 ### Your URL link: African-Marketplace-4 https://africanmarket2.herokuapp.com
 
-##Table Schema
+## Table Schema
+
 {
 CREATE TABLE user (
     id         INTEGER       NOT NULL
@@ -17,6 +18,7 @@ CREATE TABLE user (
     email      VARCHAR (128) 
 );
 }
+
 {
 CREATE TABLE item (
     id          INTEGER       NOT NULL
@@ -33,6 +35,7 @@ CREATE TABLE item (
     REFERENCES user (id) ON DELETE RESTRICT
                          ON UPDATE CASCADE
 );}
+
 {
 CREATE TABLE category (
     id      INTEGER       NOT NULL
@@ -46,6 +49,7 @@ CREATE TABLE category (
                          ON UPDATE CASCADE
 );
 }
+
 {
 CREATE TABLE user_item (
     item_id INTEGER NOT NULL,
@@ -66,6 +70,7 @@ CREATE TABLE user_item (
     )
 );
 }
+
 ## End Points
 
 | GET users |
@@ -79,11 +84,46 @@ CREATE TABLE user_item (
 |  /api/auth/register |
 | ---- |
 | required - username and password |
+| register request |
+{
+	"username": "mike12",
+	"password": "pass",
+	"email": "mike2@aol.com"
+}
+| Status: 201 Created |
+
+{
+    "newUser": {
+        "id": 5,
+        "username": "mike12",
+        "first_name": null,
+        "last_name": null,
+        "email": "mike2@aol.com"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJtaWtlMTIiLCJpYXQiOjE1NzgzMzg5MDksImV4cCI6MTU3ODc3MDkwOX0.tpMk9ha8dewCRCvAzHs3LmSU3Zr-GS8dxY2lDIvaOOg"
+}
 
 | POST |
 | --- |
 | /api/auth/login |
 | required - username and password |
+| login request |
+{
+	"username": "mike12",
+	"password": "pass"
+	
+}
+| Status: 200 OK |
+{
+    "login": {
+        "id": 5,
+        "username": "mike12",
+        "first_name": null,
+        "last_name": null,
+        "email": "mike2@aol.com"
+    },
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJtaWtlMTIiLCJpYXQiOjE1NzgzMzkxNDMsImV4cCI6MTU3ODc3MTE0M30.NB52XS64QJ6bvFFdL8tdXSoUfKRHRHx-Ee_APdEiwOw"
+}
 
 | GET user by id |
 | ---- |
