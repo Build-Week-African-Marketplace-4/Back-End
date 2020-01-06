@@ -108,12 +108,15 @@ CREATE TABLE user_item (
 | /api/auth/login |
 | required - username and password |
 | login request |
+
 {
 	"username": "mike12",
 	"password": "pass"
 	
 }
+
 | Status: 200 OK |
+
 {
     "login": {
         "id": 5,
