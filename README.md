@@ -7,6 +7,7 @@ Sauti Africa empowers small business owners, particularly women, to improve thei
 
 ## Table Schema
 
+```
 {
 CREATE TABLE user (
     id         INTEGER       NOT NULL
@@ -217,3 +218,33 @@ CREATE TABLE user_item (
 | BaseURL/api/category |
 | ---- |
 | token required |
+
+## Technologies used
+
+- Expressjs
+- Postgres
+- JWT
+- bcryptjs
+- jest
+- supertest
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+- Fork the project
+- Clone or download the project
+- Navigate into the directory and Install dependencies
+- Finally you can run the server by typing in your terminal
+
+```
+npm run server
+```
+
+## Acknowledgement
+
+[Lambda Schools](https://lambdaschool.com/)
+
+## Authors
+
+[Carlos Venegas](https://github.com/primelos)
