@@ -25,7 +25,7 @@ exports.up = function(knex) {
         .notNullable()
         .references("id")
         .inTable("user")
-        .onDelete("RESTRICT")
+        .onDelete("CASCADE")
         .onUpdate("CASCADE");
     })
 
@@ -40,7 +40,7 @@ exports.up = function(knex) {
         .unsigned()
         .references("id")
         .inTable("item")
-        .onDelete("RESTRICT")
+        .onDelete("CASCADE")
         .onUpdate("CASCADE");
     })
 
@@ -51,7 +51,7 @@ exports.up = function(knex) {
         .unsigned()
         .references("id")
         .inTable("item")
-        .onDelete("RESTRICT")
+        .onDelete("CASCADE")
         .onUpdate("CASCADE");
 
       tbl
@@ -60,7 +60,7 @@ exports.up = function(knex) {
         .unsigned()
         .references("id")
         .inTable("user")
-        .onDelete("RESTRICT")
+        .onDelete("CASCADE")
         .onUpdate("CASCADE");
 
       tbl.primary(["user_id", "item_id"]);
