@@ -169,18 +169,185 @@ CREATE TABLE user_item (
 | api/user/:id |
 | --- |
 | Restricted endpoint Token required |
- 
+
+```
+ {
+    "user": {
+        "id": 1,
+        "username": "adaeze",
+        "first_name": "Adaeze",
+        "last_name": "Abiodun",
+        "email": "adaeze@gmail.com",
+        "items": [
+            {
+                "id": 1,
+                "name": "corn",
+                "description": "red",
+                "price": 4.21,
+                "city": "Zaria",
+                "country": "Nigeria",
+                "user_id": 1,
+                "favorited": 1,
+                "categories": [
+                    {
+                        "id": 1,
+                        "type": "vegetable produce",
+                        "item_id": 1
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "cocoa bean",
+                "description": "coffee",
+                "price": 3.1,
+                "city": "Zaria",
+                "country": "Nigeria",
+                "user_id": 1,
+                "favorited": 1,
+                "categories": [
+                    {
+                        "id": 2,
+                        "type": "fruit produce",
+                        "item_id": 2
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "banana",
+                "description": "green",
+                "price": 4.5,
+                "city": "Zaria",
+                "country": "Nigeria",
+                "user_id": 1,
+                "favorited": 1,
+                "categories": [
+                    {
+                        "id": 3,
+                        "type": "fruit produce",
+                        "item_id": 3
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "cucumber",
+                "description": "regular",
+                "price": 3.5,
+                "city": "Zaria",
+                "country": "Nigeria",
+                "user_id": 1,
+                "favorited": 1,
+                "categories": [
+                    {
+                        "id": 4,
+                        "type": "vegetable produce",
+                        "item_id": 4
+                    }
+                ]
+            }
+        ],
+        "favorites": [
+            {
+                "item_id": 1,
+                "user_id": 1,
+                "name": "corn",
+                "description": "red",
+                "city": "Zaria",
+                "country": "Nigeria",
+                "price": 4.21,
+                "email": "adaeze@gmail.com",
+                "username": "adaeze",
+                "favorited": 1
+            },
+            {
+                "item_id": 2,
+                "user_id": 1,
+                "name": "cocoa bean",
+                "description": "coffee",
+                "city": "Zaria",
+                "country": "Nigeria",
+                "price": 3.1,
+                "email": "adaeze@gmail.com",
+                "username": "adaeze",
+                "favorited": 1
+            },
+            {
+                "item_id": 3,
+                "user_id": 1,
+                "name": "banana",
+                "description": "green",
+                "city": "Zaria",
+                "country": "Nigeria",
+                "price": 4.5,
+                "email": "adaeze@gmail.com",
+                "username": "adaeze",
+                "favorited": 1
+            },
+            {
+                "item_id": 4,
+                "user_id": 1,
+                "name": "cucumber",
+                "description": "regular",
+                "city": "Zaria",
+                "country": "Nigeria",
+                "price": 3.5,
+                "email": "adaeze@gmail.com",
+                "username": "adaeze",
+                "favorited": 1
+            }
+        ]
+    }
+}
+ ```
+
 | GET search by item name |
 | ---- |
 | api/item/search/:value |
 | --- |
 | You can compare the price of corn for example |
 
+```
+[
+    {
+        "id": 1,
+        "name": "corn",
+        "description": "red",
+        "city": "Zaria",
+        "country": "Nigeria",
+        "price": 4.21,
+        "user_id": 1,
+        "username": "adaeze"
+    },
+    {
+        "id": 7,
+        "name": "corn",
+        "description": "white",
+        "city": "Zaria",
+        "country": "Nigeria",
+        "price": 4.11,
+        "user_id": 2,
+        "username": "abidemi"
+    },
+    {
+        "id": 13,
+        "name": "corn",
+        "description": "yellow",
+        "city": "Zaria",
+        "country": "Nigeria",
+        "price": 2.5,
+        "user_id": 3,
+        "username": "abebi"
+    }
+]
+```
+
 | GET item |
 | --- |
 | /api/item |
 | --- |
-| See all item for sale |
+| See all items for sale |
 
 | GET item by Id |
 | --- |
