@@ -6,6 +6,7 @@ Sauti Africa empowers small business owners, particularly women, to improve thei
 ### Your URL link: African-Marketplace-4 https://africanmarket2.herokuapp.com
 
 ## Table Schema
+   seen in SQLiteStudio (3.2.1)
 
 ```
 {
@@ -123,10 +124,29 @@ CREATE TABLE user_item (
 
 ```
 {
-	"username": "mike12",
+	"username": "adaeze",
 	"password": "pass"
 	
-}
+},
+{
+	"username": "abidemi",
+	"password": "pass"
+	
+},
+{
+	"username": "abebi",
+	"password": "pass"
+	
+},
+{
+	"username": "test",
+	"password": "pass"
+	
+},
+{
+	"username": "mike12",
+	"password": "pass"	
+},
 ```
 
 | Status: 200 OK |

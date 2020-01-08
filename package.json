@@ -8,6 +8,9 @@
     "server": "nodemon",
     "start": "node index.js"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Build-Week-African-Marketplace-4/Back-End.git"
