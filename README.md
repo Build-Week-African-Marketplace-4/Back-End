@@ -406,6 +406,17 @@ CREATE TABLE user_item (
 | ---- |
 | token required |
 
+| Delete a User |
+| /api/users/:user_id |
+| token required |
+| on success | 
+
+```
+{
+    "message": "User successfully deleted."
+}
+```
+
 ## Technologies used
 
 - Expressjs
